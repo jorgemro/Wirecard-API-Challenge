@@ -25,7 +25,7 @@ public class Boleto {
 	}
 
 	private String generateBoletoNumber(double amount) {
-		String amountString = String.format("%.2f", amount).replace(".", "");
+		String amountString = String.format("%.2f", amount).replace(".", "").replace(",", "");
 		for (int i = amountString.length(); i <= 10; i++) {
 			amountString = "0" + amountString;
 		}
